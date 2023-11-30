@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Website</title>
+ <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <img src="logo.jpg" alt="Car Logo">
+        <h1>Welcome to Our Car Website</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Cars</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Login</a>
+        </nav>
+    </header>
+
+
+
+    <div class="Paraqitja">
+    <h1>WE OFFER A VARIERT OF DIFFERENT CARS</h1>
+    <h3>BUY FROM THE BEST</h3>
+    </div>
+
+
+
+    <div class="slider">
+        <div class="slides">
+          <div class="slide"><img src="fotot/as.jpg" alt="Car 1"></div>
+          <div class="slide"><img src="fotot/aston.jpg" alt="Car 2"></div>
+          <div class="slide"><img src="fotot/cls.jpg" alt="Car 3"></div>
+          <div class="slide"><img src="fotot/audi.jpg" alt="Car 4"></div>
+          <div class="slide"><img src="fotot/benzo.jpg" alt="Car 5"></div>
+          <div class="slide"><img src="fotot/auvdija.jpg" alt="Car 6"></div>
+          <div class="slide"><img src="fotot/bbbm.jpg" alt="Car 7"></div>
+          <div class="slide"><img src="fotot/63.png" alt="Car 8"></div>
+          <div class="slide"><img src="fotot/bbbm.jpg" alt="Car 8"></div>
+        </div>
+        <button id="prevBtn" onclick="prevSlide()">Previous</button>
+  <button id="nextBtn" onclick="nextSlide()">Next</button>
+      </div>
+   
+
+</body>
+<script>
+    let currentSlide = 0;
+  
+    function showSlide(index) {
+      const slides = document.querySelector('.slides');
+      const slideWidth = document.querySelector('.slide').offsetWidth;
+      slides.style.transform = `translateX(-${slideWidth * index}px)`;
+      currentSlide = index;
+    }
+  
+    function nextSlide() {
+      if (currentSlide < 7) {
+        currentSlide++;
+      } else {
+        currentSlide = 0;
+      }
+      showSlide(currentSlide);
+    }
+  
+    function prevSlide() {
+      if (currentSlide > 0) {
+        currentSlide--;
+      } else {
+        currentSlide = 7;
+      }
+      showSlide(currentSlide);
+    }
+  
+    // Automatic sliding
+    setInterval(() => {
+      nextSlide();
+    }, 3000); // Change slide every 3 seconds (adjust as needed)
+  </script>
+  
+  
+</html>
+
