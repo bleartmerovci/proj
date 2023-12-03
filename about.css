@@ -96,6 +96,19 @@ header h1 {
 }
 
 
+.brands {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    text-align: center;
+   
+}
+.brands img {
+    max-width: 100%;
+    margin-bottom: 10px; /
+}
+
+
 .team-photos {
     display: flex;
     justify-content: space-around; 
@@ -118,16 +131,30 @@ header h1 {
     font-weight: bold;
 }
 
-.brands {
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
+
+.warranty-section {
+    max-width: 800px;
+    margin: 20px auto;
     text-align: center;
-   
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-.brands img {
-    max-width: 100%;
-    margin-bottom: 10px; /
+
+.warranty-section h3 {
+    color: #ca4646;
+}
+
+.warranty-section img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.warranty-section p {
+    margin-top: 20px;
 }
 
 footer {
