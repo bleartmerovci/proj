@@ -64,6 +64,58 @@ header h1 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.brands {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    text-align: center;
+}
+
+.brands img {
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+
+.about-photo-slider {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.about-photo-slider h3 {
+   color: #ca4646;
+}
+
+.slider {
+    overflow: hidden;
+    max-width: 100%;
+    position: relative;
+    border-radius: 8px;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+}
+button {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    font-size: 24px;
+    font-weight: bold;
+    border: none;
+    color: white;
+    background-color: #ca4646;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+}
+
 .about-photo {
     max-width: 800px;
     margin: 20px auto;
@@ -95,20 +147,6 @@ header h1 {
     color: #ca4646;
 }
 
-
-.brands {
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-    text-align: center;
-   
-}
-.brands img {
-    max-width: 100%;
-    margin-bottom: 10px; /
-}
-
-
 .team-photos {
     display: flex;
     justify-content: space-around; 
@@ -126,11 +164,11 @@ header h1 {
     height: auto;
     border-radius: 8px;
 }
+
 .team-member p {
     margin-top: 10px;
     font-weight: bold;
 }
-
 
 .warranty-section {
     max-width: 800px;
@@ -162,10 +200,10 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
-  /*  position: fixed; */
     bottom: 0;
     width: 100%;
 }
+
 .social-media a {
     color: white;
     text-decoration: none;

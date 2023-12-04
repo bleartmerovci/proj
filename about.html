@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Car Website</title>
     <link rel="stylesheet" href="about.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
 </head>
+
 <body>
     <header>
         <img src="logo.jpg" alt="Car Logo">
@@ -34,40 +35,44 @@
             </p>
         </div>
 
-         <div class="brands">
+        <div class="brands">
             <p>At Ricochet Auto, you can find cars from the most renowned brands.</p>
             <img src="fotot/Car-Brands(aboutus).PNG" alt="Brands">
-          <p> Explore our collection and discover the perfect vehicle for your needs.</p>
+            <p> Explore our collection and discover the perfect vehicle for your needs.</p>
         </div>
-        <div class="about-photo">
-            <h3>Our Showroom</h3>
-            <img src="fotot/office.PNG" alt="Our Office">
 
-            <p>At Ricochet Auto, our showroom is staffed with knowledgeable and passionate professionals who share your enthusiasm for cars. Whether you're seeking advice on the latest models, comparing features, or exploring customization options, our team is dedicated to providing expert guidance to ensure your car-buying journey is seamless and enjoyable.</p>
+        <div class="about-photo-slider">
+            <h3>Our Showroom</h3>
+            <div class="slider">
+                <div class="slides">
+                    <div class="slide">
+                        <img src="fotot/office.PNG" alt="Our Office">
+                    </div>
+                    <div class="slide">
+                        <img src="fotot/Showroom.PNG" alt="Another Image">
+                    </div>
+                    <!-- Add more slides as needed -->
+                </div>
+              <p>At Ricochet Auto, our showroom is staffed with knowledgeable and passionate professionals...</p>
+            </div>
+         
         </div>
 
         <div class="about-team">
             <h3>Our team will help you find your dream car</h3>
-         
             <div class="team-photos">
                 <div class="team-member">
                     <img src="fotot/Team(1).PNG" alt="Team Member 1">
-             </div>
-                
+                </div>
             </div>
             <div class="team-photos">
                 <div class="team-member">
                     <img src="fotot/Team(2).PNG" alt="Team Member 1">
                 </div>
-                
             </div>
-            <p>Our dedicated team of friendly and knowledgeable staff members is always ready to assist you in finding the perfect vehicle to match your preferences and needs. Whether you're seeking advice on the latest models or looking for guidance in making an informed decision, our staff is committed to ensuring you have a positive and memorable interaction at our office. We take pride in fostering a warm and welcoming atmosphere where customers feel valued, and their car-buying journey becomes a delightful experience.</p>
-       
+            <p>Our dedicated team of friendly and knowledgeable staff members is always ready to assist you...</p>
         </div>
 
-      
-       
-       
         <div class="warranty-section">
             <h3>Secure and Inspected: Our Vehicles Certified by Our Professional Mechanics</h3>
             <img src="fotot/Service-plan.PNG" alt="Cars Under Warranty">
@@ -75,18 +80,42 @@
         </div>
     </section>
 
-
-    
-<footer>
+    <footer>
         &copy; 2023 Ricochet Auto. All rights reserved.
         <div class="social-media">
             Find us on:
             <a href="#" target="_blank" title="Facebook"><i class="fa fa-facebook-f"></i></a>
             <a href="#" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a>
             <a href="#" target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a>
-          
         </div>
-   
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const slider = document.querySelector(".slider");
+            const slides = document.querySelector(".slides");
+            const slideItems = document.querySelectorAll(".slide");
+
+            let index = 0;
+
+            function nextSlide() {
+                index++;
+                if (index === slideItems.length) {
+                    index = 0;
+                }
+                updateSlide();
+            }
+
+            function updateSlide() {
+                const translateValue = -index * 100 + "%";
+                slides.style.transform = "translateX(" + translateValue + ")";
+            }
+
+            // Set interval for auto-sliding (adjust duration as needed)
+            setInterval(nextSlide, 5000);
+        });
+    </script>
+
 </body>
+
 </html>
